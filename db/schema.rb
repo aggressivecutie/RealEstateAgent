@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171019150504) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "images", force: :cascade do |t|
     t.integer "property_id"
     t.datetime "created_at", null: false
@@ -50,8 +47,8 @@ ActiveRecord::Schema.define(version: 20171019150504) do
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
+    t.integer "current_sign_in_ip"
+    t.integer "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_sellers_on_email", unique: true
