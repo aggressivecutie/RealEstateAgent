@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @property.seller_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @property.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @property.latitude %>
+</p>
+
+<p>
+  <strong>Bed:</strong>
+  <%= @property.bed %>
+</p>
+
+<p>
+  <strong>Bath:</strong>
+  <%= @property.bath %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @property.car %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @property.postcode %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @property.suburb %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @property.state %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @property.title %>
+</p>
+
+<p>
+  <strong>Property type:</strong>
+  <%= @property.property_type %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

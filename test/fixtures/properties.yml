@@ -1,33 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  seller_id: 1
   description: MyText
   price: 1
+  longitude: 9.99
+  latitude: 9.99
   bed: 1
   bath: 1
-  parking: 1
+  car: 1
   postcode: MyString
   suburb: MyString
   address: MyText
   state: MyString
-  property_title: MyString
+  title: MyString
   property_type: MyString
-  longitude: 9.99
-  latitude: 9.99
-  seller_id: MyString
 
 two:
+  seller_id: 1
   description: MyText
   price: 1
+  longitude: 9.99
+  latitude: 9.99
   bed: 1
   bath: 1
-  parking: 1
+  car: 1
   postcode: MyString
   suburb: MyString
   address: MyText
   state: MyString
-  property_title: MyString
+  title: MyString
   property_type: MyString
-  longitude: 9.99
-  latitude: 9.99
-  seller_id: MyString

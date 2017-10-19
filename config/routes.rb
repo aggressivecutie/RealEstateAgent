@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :properties
+  resources :images
   devise_for :sellers
   root 'static_pages#landing'
 
