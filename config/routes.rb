@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :sellers
   root 'static_pages#landing'
 
   get 'static_pages/landing'
