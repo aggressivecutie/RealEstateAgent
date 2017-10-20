@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20171020010633) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.integer "seller_id"
     t.text "description"
     t.integer "price"
     t.decimal "longitude"
