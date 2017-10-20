@@ -37,11 +37,18 @@
                   <p class="card-text">
                     <%= property.description %>
                   </p>
-                  <a href="#" class="btn btn-primary">View details</a>
+
+                  <div class="row">
+                    <div class="col">
+                      <%= link_to 'View details', property, class: "btn btn-primary" %>
+                      <!-- <a href="/properties/" class="btn btn-primary">View details</a> -->
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
 
       <%end%>
