@@ -1,87 +1,83 @@
-<%= form_with(model: property, local: true) do |form| %>
-  <% if property.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+  <%= form_with(model: property, local: true) do |form| %>
+    <% if property.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
 
-      <ul>
-      <% property.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: :property_description %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price %>
+      <%= form.number_field :price, id: :property_price %>
+    </div>
+
+    <div class="field">
+      <%= form.label :longitude %>
+      <%= form.text_field :longitude, id: :property_longitude %>
+    </div>
+
+    <div class="field">
+      <%= form.label :latitude %>
+      <%= form.text_field :latitude, id: :property_latitude %>
+    </div>
+
+    <div class="field">
+      <%= form.label :bed %>
+      <%= form.number_field :bed, id: :property_bed %>
+    </div>
+
+    <div class="field">
+      <%= form.label :bath %>
+      <%= form.number_field :bath, id: :property_bath %>
+    </div>
+
+    <div class="field">
+      <%= form.label :car %>
+      <%= form.number_field :car, id: :property_car %>
+    </div>
+
+    <div class="field">
+      <%= form.label :postcode %>
+      <%= form.text_field :postcode, id: :property_postcode %>
+    </div>
+
+    <div class="field">
+      <%= form.label :suburb %>
+      <%= form.text_field :suburb, id: :property_suburb %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_area :address, id: :property_address %>
+    </div>
+
+    <div class="field">
+      <%= form.label :state %>
+      <%= form.text_field :state, id: :property_state %>
+    </div>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :property_title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :property_type %>
+      <%= form.text_field :property_type, id: :property_property_type %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-<!--
-  <div class="field">
-    <%#= form.label :seller_id %>
-    <%#= form.number_field :seller_id, id: :property_seller_id %>
-  </div> -->
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :property_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :property_price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :property_longitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :property_latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bed %>
-    <%= form.number_field :bed, id: :property_bed %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bath %>
-    <%= form.number_field :bath, id: :property_bath %>
-  </div>
-
-  <div class="field">
-    <%= form.label :car %>
-    <%= form.number_field :car, id: :property_car %>
-  </div>
-
-  <div class="field">
-    <%= form.label :postcode %>
-    <%= form.text_field :postcode, id: :property_postcode %>
-  </div>
-
-  <div class="field">
-    <%= form.label :suburb %>
-    <%= form.text_field :suburb, id: :property_suburb %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address, id: :property_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state, id: :property_state %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :property_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :property_type %>
-    <%= form.text_field :property_type, id: :property_property_type %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
