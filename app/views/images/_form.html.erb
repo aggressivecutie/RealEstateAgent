@@ -14,7 +14,15 @@
   <div class="field">
     <%= form.label :property_id %>
     <%= form.number_field :property_id, id: :image_property_id %>
+    <%= form.hidden_field :picture, value: @image.cached_picture_data %>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
   </div>
+
+  <% if @image.picture_data? %>
+    <%= image_tag @image.picture_url(:thumb) %>
+    Remove attachment: <%= form.check_box :remove_picture %>
+<% end %>
 
   <div class="actions">
     <%= form.submit %>

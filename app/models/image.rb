@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
-  include ImgageUploader.attachment(:picture)
+  include ImageUploader::Attachment.new(:picture)
 
-  validates :description, presence: true
+  belongs_to :seller
 
 end

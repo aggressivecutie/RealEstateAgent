@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019150504) do
+ActiveRecord::Schema.define(version: 20171020010633) do
 
   create_table "images", force: :cascade do |t|
     t.integer "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "picture"
+    t.text "picture_data"
   end
 
   create_table "properties", force: :cascade do |t|

@@ -1,2 +1,0 @@
-class ImgageUploader < Shrine
-end
