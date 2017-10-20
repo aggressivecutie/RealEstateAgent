@@ -3,9 +3,38 @@
     <button type="button" name="logo" class="btn btn-outline-light" style="font-size: 2em;">🏡</button>
   </div>
   <div class="col-4 pt-2" style="margin-left: -40px;">
-    <button type="button" name="search" class="btn">Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔍</button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalLong">
+      Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔍
+    </button>
   </div>
   <div class="col-4 text-center pt-2">
     <a type="button" name="contact" href="/static_pages/contact" class="btn btn-info">Contact</a>
+  </div>
+</div>
+
+
+
+
+<!-- Modal - Search Options -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Search options</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <%= render 'partials/search-menu' %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Search</button>
+      </div>
+    </div>
   </div>
 </div>
