@@ -1,5 +1,7 @@
 # Home & House Real Estate Agency
 
+Git issues and pull requests were heavily used to facilitate team-based development of this project, as was Slack and face-to-face communication.
+
 ###### This is a mobile-first web app containing the following features:
 
 * User authentication (allows real estate agent to sign in and add / edit / delete properties)
