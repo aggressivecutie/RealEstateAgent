@@ -19,6 +19,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
+    @property = Property.find(params[:id])
   end
 
   # POST /properties
@@ -69,6 +70,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:seller_id, :description, :price, :longitude, :latitude, :bed, :bath, :car, :postcode, :suburb, :address, :state, :title, :property_type)
+      params.require(:property).permit(:description, :price, :longitude, :latitude, :bed, :bath, :car, :postcode, :suburb, :address, :state, :title, :property_type)
     end
 end
