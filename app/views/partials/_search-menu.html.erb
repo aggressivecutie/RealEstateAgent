@@ -27,7 +27,15 @@
     <div class="col">
       <h4 class="pb-2">Location</h4>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2">
+        <!-- <input type="text" class="form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2"> -->
+
+        <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], class: "form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2" %>
+            <%= submit_tag "Search", :name => nil %>
+        <% end %>
+
+
+
       </div>
       <div class="input-group pt-2">
         <input type="text" class="form-control" placeholder="Suburb" aria-label="search by suburb" aria-describedby="basic-addon2">

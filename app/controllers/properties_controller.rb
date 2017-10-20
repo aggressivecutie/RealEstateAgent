@@ -2,10 +2,22 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
 
+
+
+
+
+
+
+
   # GET /properties
   # GET /properties.json
   def index
     @properties = Property.all
+    if params[:search]
+      @properties = Property.search(params[:search]).order("created_at DESC")
+    else
+      @property = Property.all.order("created_at DESC")
+    end
   end
 
   # GET /properties/1
