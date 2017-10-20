@@ -1,5 +1,7 @@
 # Home & House Real Estate Agency
 
+[NOT CURRENTLY WORKING, PLEASE VIEW LOCALLY] Our app has been deployed at: [http://house-and-home.herokuapp.com/](http://house-and-home.herokuapp.com/)
+
 Git issues and pull requests were heavily used to facilitate team-based development of this project, as was Slack and face-to-face communication.
 
 ###### This is a mobile-first web app containing the following features:
