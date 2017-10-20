@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Images</h1>
+<%= link_to 'Add Photo', new_image_path %>
+
+<%= render 'form', image: @image %>
 
 <table>
   <thead>

@@ -21,6 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 # Using Bootstrap 4 for front end styling
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
+# Required for image versioning
+gem 'image_processing'
+# Required for image versioning
+gem 'mini_magick'
 #Using shrine gem to attach image files to post.
 gem "shrine"
 
