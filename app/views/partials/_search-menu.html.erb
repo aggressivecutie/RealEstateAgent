@@ -30,7 +30,7 @@
         <!-- <input type="text" class="form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2"> -->
 
         <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], class: "form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2" %>
+            <%= text_field_tag :search, params[:search] %>
             <%= submit_tag "Search", :name => nil %>
         <% end %>
 
