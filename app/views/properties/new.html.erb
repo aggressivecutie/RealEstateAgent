@@ -1,5 +1,19 @@
-<h1>New Property</h1>
+<div class="container">
 
-<%= render 'form', property: @property %>
+  <div class="row pt-5 text-center">
+    <div class="col">
+      <h3>New Property</h3>
+    </div>
+  </div>
+  <div class="row pt-5">
+    <div class="col">
+      <%= render 'form', property: @property %>
+    </div>
+  </div>
+  <div class="row pt-5">
+    <div class="col">
+      <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 
-<%= link_to 'Back', properties_path %>
+</div>
