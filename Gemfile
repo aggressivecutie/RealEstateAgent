@@ -8,8 +8,8 @@ end
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -21,6 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 # Using Bootstrap 4 for front end styling
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
+# Required for image versioning
+gem 'image_processing'
+# Required for image versioning
+gem 'mini_magick'
 #Using shrine gem to attach image files to post.
 gem "shrine"
 

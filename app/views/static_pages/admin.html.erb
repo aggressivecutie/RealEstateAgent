@@ -1,8 +1,12 @@
-<h1>StaticPages#admin</h1>
-<p>Find me in app/views/static_pages/admin.html.erb</p>
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+<h1>Administration Page</h1>
+<p>Register or Login to maintain your property postings.</p>
+<a type="button" href="/sellers/sign_in" class="btn btn-info">Sign In</a>
+<p></p>
+<p> Or </p>
+<a type="button" href="/sellers/sign_up" class="btn btn-outline-info">Register</a>
