@@ -1,0 +1,139 @@
+<div class="container">
+    
+<%= form_with(model: search, local: true) do |form| %>
+  <% if search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(search.errors.count, "error") %> prohibited this search from being saved:</h2>
+
+      <ul>
+      <% search.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- PROPERTY TYPE -->
+  <div class="row">
+      <div class="col">
+        <h4 class="pb-2">Type</h4>
+        <div class="row">
+          <div class="input-group">
+            <div class="col">
+              <span class="input-group-addon">
+                  <%= form.check_box :unit, id: :search_unit %>
+                <span>&nbsp;Unit</span>
+              </span>
+            </div>
+            <div class="col">
+              <span class="input-group-addon">
+                  <%= check_box_tag (:id_search_house) %>  <!-- different checkbox approach -->
+                <span>&nbsp;House</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+ <!-- LOCATION -->
+
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Location</h4>
+        <div class="input-group">
+          <%= form.text_field :postcode, id: :search_postcode,class: "form-control", placeholder: "Postcode", aria_label: "search by postcode", aria_describedby: "basic-addon2" %>
+        </div>
+        <div class="input-group pt-2">
+          <%= form.text_field :suburb, id: :search_suburb,class: "form-control", placeholder: "Suburb", aria_label: "search by suburb", aria_describedby: "basic-addon2" %>
+        </div>
+        <div class="input-group pt-2"> 
+          <%= form.text_field :state, id: :search_state,class: "form-control", placeholder: "State", aria_label: "search by state", aria_describedby: "basic-addon2" %>
+        </div>
+    </div>
+  </div>
+
+    <!-- PRICE -->
+    <div class="row pt-4">
+        <div class="col">
+          <h4 class="pb-2">Price</h4>
+          <div class="row">
+            <div class="col">
+              <div class="input-group">
+                  <%= form.number_field :price_min, id: :search_price_min,class: "form-control", placeholder: "Min", aria_label: "min price", aria_describedby: "basic-addon2" %>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                  <%= form.number_field :price_max, id: :search_price_max,class:"form-control", placeholder: "Max", aria_label: "min price", aria_describedby: "basic-addon2" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- BEDROOMS -->
+<div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Bedrooms</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+              <%= form.number_field :bedroom_min, id: :search_bedroom_min, class: "form-control", placeholder: "Min", aria_label: "min bedrooms", aria_describedby: "basic-addon2" %>
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+              <%= form.number_field :bedroom_max, id: :search_bedroom_max, class: "form-control", placeholder: "Max", aria_label:"max bedrooms", aria_describedby: "basic-addon2" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- BATHROOMS -->
+ <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Bathrooms</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+              <%= form.number_field :bathroom_min, id: :search_bathroom_min, class: "form-control", placeholder:"Min", aria_label: "min bathrooms", aria_describedby: "basic-addon2" %>
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+              <%= form.number_field :bathroom_max, id: :search_bathroom_max, class: "form-control", placeholder: "Max", aria_label: "max bathrooms", aria_describedby: "basic-addon2" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <!-- CAR SPACES -->
+  <div class="row pt-4">
+      <div class="col">
+        <h4 class="pb-2">Parking</h4>
+        <div class="row">
+          <div class="col">
+            <div class="input-group">
+                <%= form.number_field :parking_min, id: :search_parking_min, class: "form-control", placeholder: "Min", aria_label: "min car spaces", aria_describedby: "basic-addon2" %>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group">
+                <%= form.number_field :parking_max, id: :search_parking_max, class: "form-control", placeholder: "Max", aria_label: "max car spaces", aria_describedby: "basic-addon2"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

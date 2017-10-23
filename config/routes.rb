@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :searches
   authenticate :seller do
     resources :properties
     resources :images
