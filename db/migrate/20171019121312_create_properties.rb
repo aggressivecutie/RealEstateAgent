@@ -18,5 +18,15 @@ class CreateProperties < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    create_table :properties do |t|
+      t.belongs_to :seller, index: { unique: true}, foreign_key: true
+    end
+
+    create_table :images do |t|
+      t.belongs_to :property, index: true
+      t.timestamps
+    end
+
   end
 end

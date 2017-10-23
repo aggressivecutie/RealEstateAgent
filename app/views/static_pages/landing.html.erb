@@ -1,37 +1,57 @@
 <!-- PROPERTIES FEED -->
 
 
-<% @properties.each do |property| %>
+
 <div class="container d-flex justify-content-center pt-5">
-  <div class="card" style="width: 20rem;">
-    <img class="card-img-top" src="http://via.placeholder.com/318x180" alt="Card image cap">
-    <div class="card-img-overlay">
-      <h4 class="card-title"><%= property.title %></h4>
-    </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col">
-          <p class="card-title"><%= property.price %></p>
-          <p class="card-subtitle text-muted"><%= property.address %></p>
+  <div class="row">
+    <div class="col-12">
+      <% @properties.each do |property| %>
+
+        <div class="container-fluid">
+          <div class="row pt-4 pb-4">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="http://via.placeholder.com/318x180" alt="Card image cap">
+                <div class="card-img-overlay">
+                  <h4 class="card-title"><%= property.title %></h4>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="card-title">$<%= property.price %></p>
+                      <p class="card-subtitle text-muted"><%= property.address %></p>
+                    </div>
+                    <div class="col-6 text-center">
+                      <div class="row">
+                        <div class="col-4">🛏</div>
+                        <div class="col-4">🛀</div>
+                        <div class="col-4">🚙</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4"><%= property.bed %></div>
+                        <div class="col-4"><%= property.bath %></div>
+                        <div class="col-4"><%= property.car %></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-text">
+                    <%= property.description %>
+                  </p>
+
+                  <div class="row">
+                    <div class="col">
+                      <%= link_to 'View details', property, class: "btn btn-primary" %>
+                      <!-- <a href="/properties/" class="btn btn-primary">View details</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="col text-center">
-          <div class="row">
-            <div class="col">🛏</div>
-            <div class="col">🛀</div>
-            <div class="col">🚙</div>
-          </div class="row">
-          <div class="row">
-            <div class="col"><%= property.bed %></div>
-            <div class="col"><%= property.bath %></</div>
-            <div class="col"><%= property.car %></div>
-          </div class="row">
-        </div>
-      </div>
-      <p class="card-text">
-        <%= property.description %>
-      </p>
-      <a href="#" class="btn btn-primary">View details</a>
+
+      <%end%>
     </div>
   </div>
 </div>
-<%end%>

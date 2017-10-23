@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#landing'
 
-
   get 'admin', to: 'static_pages#admin'
 
   get 'contact', to: 'static_pages#contact'

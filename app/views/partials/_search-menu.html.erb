@@ -1,0 +1,124 @@
+<div class="container">
+  <!-- PROPERTY TYPE -->
+  <div class="row">
+    <div class="col">
+      <h4 class="pb-2">Type</h4>
+      <div class="row">
+        <div class="input-group">
+          <div class="col">
+            <span class="input-group-addon">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+              <span>&nbsp;Unit</span>
+            </span>
+          </div>
+          <div class="col">
+            <span class="input-group-addon">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+              <span>&nbsp;House</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCATION -->
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Location</h4>
+      <div class="input-group">
+        <!-- <input type="text" class="form-control" placeholder="Postcode" aria-label="search by postcode" aria-describedby="basic-addon2"> -->
+
+        <%= form_tag(properties_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search", :name => nil %>
+        <% end %>
+
+
+
+      </div>
+      <div class="input-group pt-2">
+        <input type="text" class="form-control" placeholder="Suburb" aria-label="search by suburb" aria-describedby="basic-addon2">
+      </div>
+      <div class="input-group pt-2">
+        <input type="text" class="form-control" placeholder="State" aria-label="search by state" aria-describedby="basic-addon2">
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICE -->
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Price</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" aria-label="min price" aria-describedby="basic-addon2">
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Max" aria-label="max price" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEDROOMS -->
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Bedrooms</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" aria-label="min bedrooms" aria-describedby="basic-addon2">
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Max" aria-label="max bedrooms" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BATHROOMS -->
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Bathrooms</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" aria-label="min bathrooms" aria-describedby="basic-addon2">
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Max" aria-label="max bathrooms" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAR SPACES -->
+  <div class="row pt-4">
+    <div class="col">
+      <h4 class="pb-2">Parking</h4>
+      <div class="row">
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" aria-label="min car spaces" aria-describedby="basic-addon2">
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Max" aria-label="max car spaces" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,24 +1,26 @@
-# README
+# Home & House Real Estate Agency
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[NOT CURRENTLY WORKING, PLEASE VIEW LOCALLY] Our app has been deployed at: [http://house-and-home.herokuapp.com/](http://house-and-home.herokuapp.com/)
 
-Things you may want to cover:
+Git issues and pull requests were heavily used to facilitate team-based development of this project, as was Slack and face-to-face communication.
 
-* Ruby version
+###### This is a mobile-first web app containing the following features:
 
-* System dependencies
+* User authentication (allows real estate agent to sign in and add / edit / delete properties)
+* File uploads (uploading of images)
+* Filtering of properties according to specified criteria (price, number of bedrooms/bathrooms/parking spaces, location, property type)
+* Admin dashboard
+* Contact form
 
-* Configuration
 
-* Database creation
+###### Gems used include:
 
-* Database initialization
+* [Shrine](https://github.com/janko-m/shrine) for handling images
+* [Bootstrap](https://github.com/twbs/bootstrap-rubygem) for easy styling of webpages using Bootstrap 4
+* [Devise](https://github.com/plataformatec/devise) to enable real estate agents to log in and list / edit properties
 
-* How to run the test suite
+## Additional Documentation:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [User Stories](https://trello.com/b/STRmHrPY)
+* [Wireframe](https://www.figma.com/file/IavUr8wabjtNTo4L60n1qQ0S/Real-Estate-Site)
+* [ERD](https://fasttrack-s4.slack.com/files/U67BVLAF6/F7ML3BBJB/screen_shot_2017-10-19_at_2.55.10_pm.png)

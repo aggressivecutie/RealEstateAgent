@@ -34,6 +34,11 @@ class DeviseCreateSellers < ActiveRecord::Migration[5.1]
       t.timestamps null: false
     end
 
+    create_table :property do |t|
+      t.belongs_to :seller, index: true
+      t.timestamps
+    end
+
     add_index :sellers, :email,                unique: true
     add_index :sellers, :reset_password_token, unique: true
     # add_index :sellers, :confirmation_token,   unique: true
