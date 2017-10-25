@@ -19,6 +19,6 @@ Git issues and pull requests were heavily used to facilitate team-based developm
 
 ## Additional Documentation:
 
-* [User Stories](https://trello.com/b/STRmHrPY)
-* [Wireframe](https://www.figma.com/file/IavUr8wabjtNTo4L60n1qQ0S/Real-Estate-Site)
-* [ERD](https://fasttrack-s4.slack.com/files/U67BVLAF6/F7ML3BBJB/screen_shot_2017-10-19_at_2.55.10_pm.png)
+* [User Stories]![alt text](/docs/House&HomeUserStories.png)
+* [Wireframe]![alt text](/docs/House&HomeWireframe.png)
+* [ERD]![alt text](/docs/House&HomeERD.png)
