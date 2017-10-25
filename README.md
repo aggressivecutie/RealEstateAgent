@@ -24,3 +24,8 @@ Git issues and pull requests were heavily used to facilitate team-based developm
 * [User Stories]![alt text](/docs/House&HomeUserStories.png)
 * [Wireframe]![alt text](/docs/House&HomeWireframe.png)
 * [ERD]![alt text](/docs/House&HomeERD.png)
+
+##Team
+[x] [Bianca Power](https://github.com/biancapower)
+[x] [Petr Fila](https://github.com/PetrFila)
+[x] [Cindy Ariyamethe](https://github.com/aggressivecutie)
